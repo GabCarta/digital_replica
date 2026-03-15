@@ -1,0 +1,357 @@
+{
+  "info": {
+    "_postman_id": "a7bd3fbb-f7cd-4633-b76c-87380683b6d8",
+    "name": "My Collection new",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "49569318",
+    "_collection_link": "https://go.postman.co/collection/49569318-a7bd3fbb-f7cd-4633-b76c-87380683b6d8?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "http://127.0.0.1:5000/api/setData",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"sender_id\": \"Smartphone01\",\r\n\"security_key\": \"cTN3T_Ud_WW_nSFBjbWGRaUJPXjQGK47eR99fVSu5FU=\",\r\n\"id\": \"cond_bed\",\r\n\"temperatura\": 25,\r\n\"stato\": \"ON\",\r\n\"consumo\": 3\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/setData",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "setData"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://127.0.0.1:5000/api/getData",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/getData?id=cond_bed&collection=Condizionatore&mode=history&sender_id=Smartphone01",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "getData"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "cond_bed"
+            },
+            {
+              "key": "collection",
+              "value": "Condizionatore"
+            },
+            {
+              "key": "mode",
+              "value": "history"
+            },
+            {
+              "key": "sender_id",
+              "value": "Smartphone01"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "http://127.0.0.1:5000/api/getData",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:5000/api/getData?id=cond_bath&collection=Condizionatore&mode=history&sender_id=Smartphone01&security_key=qd2LDPnC5XCItoex8Zz17q_IMh7wsX_SdzrZ7Cdf3Nw=",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "getData"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "cond_bath"
+                },
+                {
+                  "key": "collection",
+                  "value": "Condizionatore"
+                },
+                {
+                  "key": "mode",
+                  "value": "history"
+                },
+                {
+                  "key": "sender_id",
+                  "value": "Smartphone01"
+                },
+                {
+                  "key": "security_key",
+                  "value": "qd2LDPnC5XCItoex8Zz17q_IMh7wsX_SdzrZ7Cdf3Nw=",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "_postman_previewlanguage": null,
+          "header": null,
+          "cookie": [],
+          "body": null
+        },
+        {
+          "name": "http://127.0.0.1:5000/api/getData",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:5000/api/getData?id=cond_bath&collection=Condizionatore&mode=realtime&sender_id=Smartphone01&security_key=qd2LDPnC5XCItoex8Zz17q_IMh7wsX_SdzrZ7Cdf3Nw=",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "getData"
+              ],
+              "query": [
+                {
+                  "key": "id",
+                  "value": "cond_bath"
+                },
+                {
+                  "key": "collection",
+                  "value": "Condizionatore"
+                },
+                {
+                  "key": "mode",
+                  "value": "realtime"
+                },
+                {
+                  "key": "sender_id",
+                  "value": "Smartphone01"
+                },
+                {
+                  "key": "security_key",
+                  "value": "qd2LDPnC5XCItoex8Zz17q_IMh7wsX_SdzrZ7Cdf3Nw="
+                }
+              ]
+            }
+          },
+          "_postman_previewlanguage": "",
+          "header": [],
+          "cookie": [
+            {
+              "expires": "Invalid Date",
+              "domain": "",
+              "path": ""
+            }
+          ],
+          "body": ""
+        }
+      ]
+    },
+    {
+      "name": "http://127.0.0.1:5000/api/registration",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"database\": {\r\n        \"driver\": \"mongodb\",\r\n        \"host\": \"mio_mongo\",      \r\n        \"port\": 27017,            \r\n        \"dbname\": \"DR_generico\"\r\n    },\r\n     \"Profile\": {\r\n        \"id\": \"Smartphone01\",\r\n        \"OS\": \"Android\"\r\n    },\r\n    \r\n    \"collections\": {\r\n        \"Condizionatore\": {\r\n            \"db_collection_name\": \"DR_Condizionatore\",\r\n            \"required_fields\": { \"id\": \"string\" },\r\n            \"allowed_id\": [\"cond_kit\",\"cond_bed\",\"cond_bath\",\"cond_liv\"],\r\n            \"allowed_values\": { \"stato\": [\"ON\", \"OFF\"], \"temperatura\": \"float\",\"consumo\": \"float\" }\r\n        },\r\n        \"Luce\":{\r\n            \"db_collection_name\": \"DR_Luce\",\r\n            \"required_fields\":{\"id\": \"string\"},\r\n            \"allowed_id\":[\"ligh_kit\",\"ligh_bed\",\"ligh_bath\",\"ligh_liv\"],\r\n            \"allowed_values\":{\"stato\": [\"ON\",\"OFF\"],\r\n                \"intensità_luminosa\": \"float\",\r\n                \"consumo\": \"float\"}\r\n        }\r\n        },\r\n\r\n    \"brokers\": {\r\n        \"mqtt\": {\r\n            \"broker_address\": \"broker.mqttdashboard.com\",\r\n            \"port\": 1883,\r\n            \"topic_subscribe\": \"device_carta\"\r\n        }\r\n    }\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/registration",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "registration"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://127.0.0.1:5000/api/service",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"database\": {\r\n        \"driver\": \"mongodb\",\r\n        \"host\": \"localhost\",\r\n        \"port\": 27017,\r\n        \"dbname\": \"DR_generico\"\r\n    },\r\n   \r\n    \"Profile\": {\r\n        \"id\": \"Smartphone02\",\r\n        \"OS\": \"Android\"\r\n    },\r\n    \"collections\": {\r\n        \"Condizionatore\": {\r\n            \"db_collection_name\": \"DR_Condizionatore\",\r\n            \"required_fields\": { \"id\": \"string\" },\r\n            \"allowed_id\": [\"cond_kit\", \"cond_bath\", \"cond_liv\", \"cond_bed\"],\r\n            \"allowed_values\": { \"stato\": [\"ON\", \"OFF\"], \"temperatura\": \"float\" }\r\n        }\r\n    },\r\n    \"brokers\": {\r\n        \"mqtt\": {\r\n            \"broker_address\": \"broker.mqttdashboard.com\",\r\n            \"port\": 1883,\r\n            \"topic_subscribe\": \"device_carta\"\r\n        }\r\n    }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/service_pf",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "service_pf"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "http://127.0.0.1:5000/api/service",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"database\": {\r\n        \"driver\": \"mongodb\",\r\n        \"host\": \"localhost\",\r\n        \"port\": 27017,\r\n        \"dbname\": \"DR_generico\"\r\n    },\r\n   \r\n    \"Profile\": {\r\n        \"id\": \"Smartphone02\",\r\n        \"OS\": \"Android\"\r\n    },\r\n    \"collections\": {\r\n        \"Condizionatore\": {\r\n            \"db_collection_name\": \"DR_Condizionatore\",\r\n            \"required_fields\": { \"id\": \"string\" },\r\n            \"allowed_id\": [\"cond_kit\", \"cond_bath\", \"cond_liv\", \"cond_bed\"],\r\n            \"allowed_values\": { \"stato\": [\"ON\", \"OFF\"], \"temperatura\": \"float\" }\r\n        }\r\n    },\r\n    \"brokers\": {\r\n        \"mqtt\": {\r\n            \"broker_address\": \"broker.mqttdashboard.com\",\r\n            \"port\": 1883,\r\n            \"topic_subscribe\": \"device_carta\"\r\n        }\r\n    }\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://127.0.0.1:5000/api/service_pf",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "service_pf"
+              ]
+            }
+          },
+          "_postman_previewlanguage": null,
+          "header": null,
+          "cookie": [],
+          "body": null
+        }
+      ]
+    },
+    {
+      "name": "http://127.0.0.1:5000/api/sendData",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"sender_id\": \"Smartphone01\",\r\n  \"security_key\": \"cTN3T_Ud_WW_nSFBjbWGRaUJPXjQGK47eR99fVSu5FU=\",\r\n  \"id\": \"ligh_kit\",\r\n  \"stato\": \"ON\",\r\n  \"intensità_luminosa\": 50,\r\n  \"consumo\": 1.5\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/sendData",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "sendData"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://127.0.0.1:5000/api/check_consumo",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/api/check_consumo?id=cond_bed&collection=Condizionatore",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "check_consumo"
+          ],
+          "query": [
+            {
+              "key": "id",
+              "value": "cond_bed",
+              "type": "text"
+            },
+            {
+              "key": "collection",
+              "value": "Condizionatore",
+              "type": "text"
+            }
+          ]
+        },
+        "description": "Servizio per monitorare i consumi \r\n"
+      },
+      "response": []
+    }
+  ]
+}

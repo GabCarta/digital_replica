@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+
+  mio_mongo:
+    image: mongo:latest
+    container_name: mio_mongo
+    ports:
+      - "27018:27017"
+    networks:
+      - rete_iot
+
+
+  la-mia-app:
+    build: .
+    container_name: la-mia-app
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./:/app
+    networks:
+      - rete_iot
+    depends_on:
+      - mio_mongo
+
+
+networks:
+  rete_iot:
+    driver: bridge
+
+volumes:
+  mongo_db:

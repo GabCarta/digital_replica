@@ -1,0 +1,45 @@
+Profile:
+  OS: Android
+  id: Smartphone01
+brokers:
+  mqtt:
+    broker_address: broker.mqttdashboard.com
+    port: 1883
+    topic_subscribe: device_carta
+collections:
+  Condizionatore:
+    allowed_id:
+    - cond_kit
+    - cond_bed
+    - cond_bath
+    - cond_liv
+    allowed_values:
+      consumo: float
+      stato:
+      - 'ON'
+      - 'OFF'
+      temperatura: float
+    db_collection_name: DR_Condizionatore
+    required_fields:
+      id: string
+  Luce:
+    allowed_id:
+    - ligh_kit
+    - ligh_bed
+    - ligh_bath
+    - ligh_liv
+    allowed_values:
+      consumo: float
+      "intensit\xE0_luminosa": float
+      stato:
+      - 'ON'
+      - 'OFF'
+    db_collection_name: DR_Luce
+    required_fields:
+      id: string
+database:
+  dbname: DR_generico
+  driver: mongodb
+  host: mio_mongo
+  port: 27017
+id: Smartphone01
