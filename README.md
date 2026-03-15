@@ -8,6 +8,8 @@ digital_replica/
 <br>├── security.py
 <br>├── requirements.txt
 <br>├── Dockerfile
+<br>├──Service/
+<br>│ ├── check_consumi.py
 <br>├── resources/
 <br>│ ├── __init__.py
 <br>│ ├── registration.py
@@ -15,7 +17,6 @@ digital_replica/
 <br>│ └── data_mqtt.py
 <br>├── services/
 <br>│ ├── __init__.py
-<br>│ ├── registration_service.py
 <br>│ ├── profile_service.py
 <br>│ ├── data_service.py
 <br>│ └── mqtt_service.py
@@ -48,6 +49,8 @@ services/data_service.py contiene la gestione dei dati. Esegue la validazione ba
 
  
 services/mqtt_service.py contiene la gestione dei messaggi MQTT. Usa broker e impostazioni salvate in profiles/device.yaml per pubblicare messaggi e, se necessario, leggere messaggi.
+
+Service/check_consumi.py Servizio utilizzato per andare a calcolare i consumi dei device accessi. Suoperata una certa soglia, il dispositivo viene spento e il comando viene aggiornato andando a scrivere sul database
 
 # Test
 Per andare a testare questo progetto viene utilizzato POSTMAN, con il quale andiamo ad effettuare le varie app.route presenti nel progetto. Oltre alla struttura del codice è presente anche un file .json dove sono presenti tutte le chiamate effettuate con POSTMAN, con degli esempi dei dati che vanno necessariamente passati alle varie chiamate per poter funzionare correttamente.
